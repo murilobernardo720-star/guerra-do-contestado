@@ -2,32 +2,36 @@ body {
   background-color: black;
   color: white;
   font-family: Arial, sans-serif;
-  text-align: center;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
-header, footer {
+.inicio {
+  padding: 60px 20px;
+  background-color: #111;
+}
+
+.botoes button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.botoes button:hover {
+  background-color: #666;
+}
+
+section {
+  padding: 40px 20px;
+}
+
+footer {
   background-color: #111;
   padding: 20px;
-}
-
-.imagens img {
-  width: 30%;
-  margin: 10px;
-  border: 2px solid white;
-}
-
-.audio, .quiz, .qr {
-  margin: 40px 0;
-}
-
-.correct {
-  color: limegreen;
-  font-weight: bold;
-}
-
-.incorrect {
-  color: red;
-  font-weight: bold;
 }
