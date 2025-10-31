@@ -1,6 +1,8 @@
 function playMusic() {
   const audio = document.getElementById("audio");
-  audio.play();
+  if (audio) {
+    audio.play();
+  }
 }
 
 const questions = [
@@ -43,11 +45,7 @@ if (document.getElementById("quiz-container")) {
       const btn = document.createElement("button");
       btn.textContent = opt;
       btn.onclick = () => {
-        if (idx === q.answer) {
-          div.classList.add("correct");
-        } else {
-          div.classList.add("incorrect");
-        }
+        div.classList.add(idx === q.answer ? "correct" : "incorrect");
         setTimeout(() => {
           div.classList.remove("correct", "incorrect");
         }, 1000);
