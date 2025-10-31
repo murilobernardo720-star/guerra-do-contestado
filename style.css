@@ -1,0 +1,33 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #111;
+  padding: 20px;
+}
+
+.imagens img {
+  width: 30%;
+  margin: 10px;
+  border: 2px solid white;
+}
+
+.audio, .quiz, .qr {
+  margin: 40px 0;
+}
+
+.correct {
+  color: limegreen;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
