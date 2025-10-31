@@ -2,47 +2,30 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Guerra do Contestado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Educativo</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section class="inicio">
-    <h1>Site Educativo: Guerra do Contestado</h1>
-    <p>Criado por Bernardo | Grupo: Bernardo, Cezar, Matheus e Josimar</p>
-    <div class="botoes">
-      <a href="quiz.html" class="botao">Ir para o Quiz</a>
-      <a href="qr.html" class="botao">Ver QR Code</a>
-      <button onclick="mostrarAudio()" class="botao">Ouvir Faixa Explicativa</button>
-    </div>
+  <header>
+    <h1>Site Educativo</h1>
+    <p>Criado por Bernardo</p>
+    <p>Integrantes: Bernardo, Matheus, Cezar e Josima</p>
+  </header>
+
+  <section class="gallery">
+    <img src="images/imagem1.jpg" alt="Imagem 1" />
+    <img src="images/imagem2.jpg" alt="Imagem 2" />
+    <img src="images/imagem3.jpg" alt="Imagem 3" />
   </section>
 
-  <!-- IMAGENS -->
-  <section class="imagens">
-    <h2>Imagens Históricas</h2>
-    <div class="galeria">
-      <img src="imagens/imagem1.jpg" alt="Imagem 1 da Guerra do Contestado" />
-      <img src="imagens/imagem2.jpg" alt="Imagem 2 da Guerra do Contestado" />
-      <img src="imagens/imagem3.jpg" alt="Imagem 3 da Guerra do Contestado" />
-    </div>
+  <section class="buttons">
+    <button onclick="playMusic()">🎵 Tocar Música</button>
+    <button onclick="location.href='quiz.html'">🧠 Quiz</button>
+    <button onclick="location.href='qr.html'">📱 QR Code</button>
   </section>
 
-  <!-- ÁUDIO -->
-  <section id="audio" class="audio" style="display: none;">
-    <h2>Faixa Explicativa</h2>
-    <audio id="faixa" controls autoplay>
-      <source src="audio/faixa.mp3" type="audio/mpeg" />
-      Seu navegador não suporta áudio.
-    </audio>
-  </section>
-
-  <script>
-    function mostrarAudio() {
-      const audioSection = document.getElementById("audio");
-      const faixa = document.getElementById("faixa");
-      audioSection.style.display = "block";
-      faixa.play();
-      audioSection.scrollIntoView({ behavior: "smooth" });
-    }
-  </script>
+  <audio id="audio" src="faixa.mp3"></audio>
+  <script src="script.js"></script>
 </body>
 </html>
