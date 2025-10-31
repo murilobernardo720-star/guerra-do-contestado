@@ -2,51 +2,46 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guerra do Contestado</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- INÍCIO -->
-  <section id="inicio" class="inicio">
-    <h1>Guerra do Contestado</h1>
-    <p>Site criado por Bernardo | Grupo: Bernardo, Cezar, Matheus e Josimar</p>
+  <section class="inicio">
+    <h1>Site Educativo: Guerra do Contestado</h1>
+    <p>Criado por Bernardo | Grupo: Bernardo, Cezar, Matheus e Josimar</p>
     <div class="botoes">
-      <button onclick="scrollToSection('quiz')">Ir para o Quiz</button>
-      <button onclick="scrollToSection('qr')">Ver QR Code</button>
-      <button onclick="scrollToSection('audio')">Ouvir Faixa</button>
+      <a href="quiz.html" class="botao">Ir para o Quiz</a>
+      <a href="qr.html" class="botao">Ver QR Code</a>
+      <button onclick="mostrarAudio()" class="botao">Ouvir Faixa Explicativa</button>
+    </div>
+  </section>
+
+  <!-- IMAGENS -->
+  <section class="imagens">
+    <h2>Imagens Históricas</h2>
+    <div class="galeria">
+      <img src="imagens/imagem1.jpg" alt="Imagem 1 da Guerra do Contestado" />
+      <img src="imagens/imagem2.jpg" alt="Imagem 2 da Guerra do Contestado" />
+      <img src="imagens/imagem3.jpg" alt="Imagem 3 da Guerra do Contestado" />
     </div>
   </section>
 
   <!-- ÁUDIO -->
-  <section id="audio" class="audio">
+  <section id="audio" class="audio" style="display: none;">
     <h2>Faixa Explicativa</h2>
-    <audio controls>
+    <audio id="faixa" controls autoplay>
       <source src="audio/faixa.mp3" type="audio/mpeg" />
       Seu navegador não suporta áudio.
     </audio>
   </section>
 
-  <!-- QUIZ -->
-  <section id="quiz" class="quiz">
-    <h2>Quiz: Teste seus conhecimentos</h2>
-    <div id="quiz-container"></div>
-  </section>
-
-  <!-- QR CODE -->
-  <section id="qr" class="qr">
-    <h2>Escaneie o QR Code:</h2>
-    <img src="qr-code.png" alt="QR Code" width="200" />
-  </section>
-
-  <footer>
-    <p>Obrigado por visitar! 🌟</p>
-  </footer>
-
-  <script src="script.js"></script>
   <script>
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    function mostrarAudio() {
+      const audioSection = document.getElementById("audio");
+      const faixa = document.getElementById("faixa");
+      audioSection.style.display = "block";
+      faixa.play();
+      audioSection.scrollIntoView({ behavior: "smooth" });
     }
   </script>
 </body>
